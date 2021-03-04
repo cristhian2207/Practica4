@@ -1,0 +1,48 @@
+using System;
+
+namespace ejemArrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region
+
+            double[] edades = new double[4];
+            Console.WriteLine("Escriba los números que desee.");
+           
+            for (int i = 0; i < 4; i++)
+            {
+                edades[i] = Convert.ToDouble(Console.ReadLine());
+            }
+                
+            Console.WriteLine("Los números: ");
+
+            double suma = 0;
+            for (int x = 0; x < 4; x++)
+            {
+                suma += edades[x];
+            }
+
+            foreach (double numeros in edades)
+                Console.WriteLine(numeros);
+                
+            Console.WriteLine("La suma de ellos es: " + suma);
+
+            Console.WriteLine("Su promedio final es: " + dividir(suma, 4));
+
+
+
+        static double dividir(double a, int b)
+        {
+
+            return  a / b;
+
+        }
+           
+            Console.ReadKey();
+            #endregion
+
+        }
+    }
+}
